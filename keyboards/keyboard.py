@@ -1,0 +1,22 @@
+from aiogram.types import KeyboardButton, ReplyKeyboardMarkup
+
+b1 = KeyboardButton("English")
+b2 = KeyboardButton("Русский")
+b3ru = KeyboardButton("Сменить язык")
+b3en = KeyboardButton("Change language")
+b3chatgpt_ru = KeyboardButton("Начать чат с ChatGPT")
+b3chatgpt_en = KeyboardButton("Start chat with ChatGPT")
+b4ru = KeyboardButton("Помощь")
+b4en = KeyboardButton("Help")
+chatgpt_chat_ru = KeyboardButton("Очистить историю")
+chatgpt_chat_ru1 = KeyboardButton("Отменить")
+chatgpt_chat_en = KeyboardButton("Clear history")
+chatgpt_chat_en1 = KeyboardButton("Cancel")
+kb_start = KeyboardButton("/start")
+
+kb = ReplyKeyboardMarkup(resize_keyboard=True).add(b1, b2)
+kb3ru = ReplyKeyboardMarkup(resize_keyboard=True).insert(b3chatgpt_ru).add(b3ru, b4ru)
+kb3en = ReplyKeyboardMarkup(resize_keyboard=True).insert(b3chatgpt_en).add(b3en, b4en)
+chatgpt_ru = ReplyKeyboardMarkup(resize_keyboard=True).add(chatgpt_chat_ru1).row(chatgpt_chat_ru)
+chatgpt_en = ReplyKeyboardMarkup(resize_keyboard=True).add(chatgpt_chat_en1).row(chatgpt_chat_en)
+kb_start_general = ReplyKeyboardMarkup(resize_keyboard=True).add(kb_start)
